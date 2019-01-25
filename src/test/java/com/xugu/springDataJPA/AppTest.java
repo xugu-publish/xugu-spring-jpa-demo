@@ -47,11 +47,21 @@ public class AppTest
 		 System.out.println("更新数据："+personDao.save(person));;
 	 }
 	 
+	 /**
+	  * 删除某一条数据
+	  */
 	 @After
 	 public void delete(){
 		Person person = personDao.findById(id);
 		personDao.delete(person);
 		System.out.println("删除数据："+person);
 	 }
-	
+
+//	 /**
+//	  * 清除所有数据
+//	  */
+//	 @Test
+//	 public void truncate(){
+//		 personDao.deleteAll();
+//	 }
 }
