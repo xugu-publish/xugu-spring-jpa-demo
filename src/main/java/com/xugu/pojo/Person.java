@@ -5,6 +5,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * 数据库表实体
+ * 
+ * @author wsy
+ * @date 2019/01/31
+ */
 @Entity
 @Table(name="person")
 public class Person

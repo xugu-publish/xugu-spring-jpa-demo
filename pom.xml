@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.xugu</groupId>
-  <artifactId>springDataJPA</artifactId>
+  <artifactId>xugu-spring-jpa-demo</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
-  <name>springDataJPA</name>
+  <name>xugu-spring-jpa-demo</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -26,11 +26,11 @@
       <artifactId>spring-data-jpa</artifactId>
       <version>2.1.4.RELEASE</version>
     </dependency>
-    <!--  <dependency>
+     <dependency>
       <groupId>com.xugu</groupId>
       <artifactId>cloudjdbc</artifactId>
-      <version>10.0.2.0</version>
-    </dependency>-->
+      <version>10.0</version>
+    </dependency>
     <dependency>
 		<groupId>org.hibernate</groupId>
 		<artifactId>hibernate-core</artifactId>
@@ -49,7 +49,7 @@
     <dependency>
       <groupId>com.xugu</groupId>
       <artifactId>XuGuDialect</artifactId>
-      <version>4_20180115</version>
+      <version>4.0</version>
     </dependency>
     <dependency>
       <groupId>com.alibaba</groupId>

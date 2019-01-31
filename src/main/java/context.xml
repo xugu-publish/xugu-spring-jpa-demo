@@ -13,16 +13,16 @@
     <!-- 1. 配置数据源 -->
     <context:property-placeholder location="classpath:db.properties"/>
     <!-- c3p0数据源 -->
-    <!--<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+    <bean id="c3p0DataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="jdbcUrl" value="${url}"/>
         <property name="driverClass" value="${driver}"/>
         <property name="user" value="${user}"/>
         <property name="password" value="${pwd}"/>
         <property name="initialPoolSize" value="${initialPoolSize}"/>
         <property name="maxPoolSize" value="${maxPoolSize}"/>
-    </bean>-->
+    </bean>
     <!-- druid -->
-    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+    <bean id="druidDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
         <property name="url" value="${url}"/>
         <property name="driverClassName" value="${driver}"/>
         <property name="username" value="${user}"/>
@@ -32,7 +32,7 @@
     </bean>
     <!-- 2. 配置 JPA 的 EntityManagerFactory -->
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
+        <property name="dataSource" ref="druidDataSource"/>
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"></bean>
         </property>
