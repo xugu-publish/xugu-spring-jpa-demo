@@ -1,5 +1,5 @@
 
-# xugu-mybatis-demo #
+# xugu-spring-jpa-demo #
 
 虚谷数据库使用Spring data jpa框架的demo程序(含第三方数据源)
 
